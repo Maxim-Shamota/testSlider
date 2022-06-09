@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.button {
+    background: none;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: .9rem;
+}
+
+.button:hover {
+    background: orangered;
+}
+
+.button:active {
+    background: #000;
+    color: #fff;
+}
+
+.slider {
+    border: 2px solid black;
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+@media (max-width:768px) {
+    .slider {
+        height: 400px;
+    }
+}
+
+@media (max-width:568px) {
+    .slider {
+        height: 300px;
+    }
+}
+
+@media (max-width:430px) {
+    .slider {
+        height: 200px;
+    }
+}
+
+
+.slider-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all ease 1s;
+}
+
+.slider-item {
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
